@@ -10,14 +10,47 @@ This Docker Cleanup Script, created by Seyed Ali Emami, is a powerful Bash scrip
 - **Easy to Use**: With a simple, interactive menu, users of all levels can navigate through the options and perform the desired cleanup tasks efficiently.
 - **Creator's Touch**: Crafted with care by Seyed Ali Emami, ensuring reliability and effectiveness.
 
-## Usage
+# Usage
 
-1. **Clone the Repository**: Clone this repository to your Ubuntu server where Docker is installed.
-2. **Run the Script**: Navigate to the script's directory and run it with root privileges:
+## Quick Start Guide
+
+Follow these steps to use the Docker Cleanup Script on your Ubuntu server:
+
+1. **Clone the Repository**: Start by cloning this repository to your server where Docker is installed. Open a terminal and run the following command:
+
    ```bash
-   sudo ./docker_cleanup.sh
+   git clone https://github.com/aliemamidev/Complete-Docker-Removal.git
    ```
-3. **Choose Your Option**: Follow the interactive menu to select either a full Docker removal or specific cleanup steps.
+
+2. **Access the Script Directory**: Change into the script's directory with:
+
+   ```bash
+   cd Complete-Docker-Removal/
+   ```
+
+3. **Execute the Script**: Run the script with root privileges to ensure it has the necessary permissions to make changes. Use the command:
+
+   ```bash
+   sudo bash docker_cleanup.sh
+   ```
+
+4. **Navigate the Menu**: Once the script is running, you'll be presented with an interactive menu. Here's what each option does:
+
+   - **1) Complete Docker Removal**: Select this option for an all-encompassing cleanup that removes Docker containers, images, volumes, networks, and all related files and directories. Ideal for users looking to completely uninstall Docker from their system.
+
+   - **2) Stop All Docker Containers**: This option will stop all running Docker containers. Useful if you need to halt all Docker processes without removing any data.
+
+   - **3) Remove All Docker Components**: Choose this to delete all Docker containers, images, volumes, and networks, without uninstalling Docker itself. 
+
+   - **4) Uninstall Docker Packages**: This removes Docker packages from your system but leaves behind data like images and containers.
+
+   - **5) Remove Docker Directories and Files**: For cleaning up Docker directories and any remaining configuration files.
+
+   - **6) Final Cleanup of Docker-related Files**: Executes a search and destroy for any files with 'docker' in their names across the system. Use with caution, as this can potentially remove non-Docker related files that happen to match the search criteria.
+
+   - **7) Exit**: Exits the script without performing any operations.
+
+Choose the option that best suits your needs. For a complete cleanup, option 1 is recommended, but if you're looking to perform specific tasks, options 2 through 6 offer targeted actions.
 
 ## Prerequisites
 
